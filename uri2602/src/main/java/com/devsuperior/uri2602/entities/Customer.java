@@ -7,7 +7,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "customers")
 public class Customer {
-	//teste
 
 	@Id
 	private Long id;
