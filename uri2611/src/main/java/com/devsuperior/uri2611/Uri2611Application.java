@@ -29,6 +29,11 @@ public class Uri2611Application implements CommandLineRunner {
 		for (MovieMinDTO dto : result1) {
 			System.out.println(dto);
 		}
+		System.out.println("-----------------------------------------");
+		List<MovieMinDTO> list2 = repository.search2("Action");
+		for (MovieMinDTO dto : list2) {
+			System.out.println(dto);
+		}
 
 	}
 }
