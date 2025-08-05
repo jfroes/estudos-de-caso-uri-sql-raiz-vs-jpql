@@ -17,7 +17,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
             "WHERE UPPER(genres.description) = UPPER(:genreName)")
     List<MovieMinProjection> search1(String genreName);
 
-    @Query("SELECT new   com.devsuperior.uri2611.dtos.MovieMinDTO(obj.id, obj.name)"
+    @Query("SELECT new com.devsuperior.uri2611.dtos.MovieMinDTO(obj.id, obj.name)"
             + "FROM Movie obj "
             + "WHERE UPPER(obj.genre.description) = UPPER(:genreName)")
     List<MovieMinDTO> search2(String genreName);
